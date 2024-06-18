@@ -1,0 +1,151 @@
+body{
+    max-height: 100vh;
+    padding : 0;
+    background: url("../gambar/labor.jpg");
+    margin : 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100%;
+}
+
+body.start{
+    background: url("../gambar/labor-desk.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: background 1s linear;
+}
+
+.container{
+    max-height: 100vh;
+    overflow: unset;
+    width: 100vw;
+    height : 100vh;
+    display: flex;
+    justify-content : center;
+    align-items : center;
+}
+
+.start-btn{
+    z-index: 10;
+    position : absolute;
+    bottom : 20vh;
+    animation: myAnim 2s ease 2s infinite normal forwards;
+    padding : .5rem 2rem;
+    border-radius: 2rem;
+    font-weight : bold;
+    font-size : 1.5rem;
+    background-color: yellow;
+    border: solid black 1px;
+}
+
+.start-btn.hide{
+    position: fixed;
+    animation: none;
+    transform: translateY(50vh);
+    transition : transform 1s linear;
+}
+
+.home-title{
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bold;
+    text-shadow: 0 0 5px white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.welcome{
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
+}
+
+.mute-btn{
+    z-index: 5;
+    border-radius: 1rem;
+    padding : .5rem;
+    background-color: rgba(0,0,0,.2);
+    width : 2rem;
+    position : absolute;
+    top : 1rem; 
+    right : 1rem;
+}
+
+.text-area{
+    display: flow;
+    align-items: center;
+    justify-content: center;
+}
+
+.text-area.hide{
+    position: fixed;
+    animation: none;
+    transform: translateY(-100vh);
+    transition : transform 1s linear;
+}
+
+.palette{
+    border-radius: 5%;
+    justify-content: space-between;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    position: fixed;
+    right : 1rem;
+    bottom : 2rem;
+    background-color : rgb(255, 255, 255);
+    width : 40vw;
+    height  : 90vh;
+    transform: translateY(0);
+    transition: transform 1s linear;
+}
+
+.palette.hide{
+    position: fixed;
+    visibility: hidden;
+    transform: translateY(50vh);
+}
+
+.palette-img{
+    object-fit: fill;
+}
+
+.area{
+    padding : 2rem 1rem;
+}
+
+.area img{
+    z-index: 10;
+    object-fit: scale-down;
+    width: 100%;
+    height: 80%;
+    border-radius:100% ;
+    background-color: rgb(221, 221, 221);
+}
+
+
+.tools-area{
+    background-color: rgba(0,0,0,.2);
+    position : absolute;
+    bottom : 5vh;
+    width : 40vw;
+    height : 30vh;
+    display: flex;
+    border: solid black 2px;
+    left : 1rem;
+    padding : 1rem;
+    align-items :last baseline;
+    transform: translateX(0);
+    transition: transform 1s linear;
+}
+
+.tools-area.hide{
+    visibility: hidden;
+    position: fixed;
+   transform: translateX(-50vw);
+}
+
+.tools-area img{
+    margin-right : 2rem;
+    width : auto;
+    height : 25vh;
+}
