@@ -15,8 +15,21 @@
             <span class="welcome">Selamat datang di virtual lab ^-^</span>
         </div>
         <button class="start-btn" id="mulai" onclick="start()">Mulai</button>
+        <button class="tutorial hide" id="tutorial" onclick="openTutor()">Tutorial</button>
         <div class="palette hide" id="palette">
             
+        </div>
+
+        <div id="tutorialArea" class="tutorial-area hide">
+            <img src="asset/gambar/doctor.png" alt="" class="dokter">
+            <div  class="tutor-text">
+                <label>Gunakan sampel darah untuk mengecek golongan darah </label><br>
+                <label>Tarik salah satu item ke dalam papan / palette</label>
+            </div >
+            <div  class="tutor-text-palette">
+                <label>Gunakan palette untuk mencampurkan dan menganalisa golongan darah </label><br>
+            </div >
+            <button class="understand" onclick="closeTutor()">Mengerti</button>
         </div>
 
         <div class="tools-area hide" id="toolsArea">

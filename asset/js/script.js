@@ -12,8 +12,10 @@ let palette = document.getElementById("palette");
 let toolsArea = document.getElementById("toolsArea");
 let speaker = document.getElementById("speaker");
 let body = document.getElementById("body");
+let tutorialArea = document.getElementById("tutorialArea");
 let selectedArea = 0;
 let tombol_start = document.getElementById("mulai");
+let tutorial = document.getElementById("tutorial");
 let text_area_start = document.getElementById("start-text");
 bgm.src = "asset/musik/bgm1.mp3";
 bgm.loop = true;
@@ -38,6 +40,15 @@ function start() {
     body.classList.toggle("start");
     toolsArea.classList.remove("hide");
     palette.classList.remove("hide");
+    tutorial.classList.remove("hide");
+}
+
+function closeTutor(){
+    tutorialArea.classList.add("hide");
+}
+
+function openTutor(){
+    tutorialArea.classList.remove("hide");
 }
 
 function mute() {
@@ -78,18 +89,18 @@ sample3.addEventListener("dragstart", () => {
 
 
 let paletteArea = [
-    "normal",
-    "normal",
-    "normal",
-    "normal",
-    "normal",
-    "normal",
-    "normal",
-    "normal",
-    "normal",
-    "normal",
-    "normal",
-    "normal"
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    ""
 ];
 
 let areaList = [];
@@ -146,22 +157,30 @@ document.addEventListener("dragover", (e) => {
 });
 
 function putItem(newIdx){
+    let isbold = paletteArea[newIdx].includes("a") || paletteArea[newIdx].includes("ab") || paletteArea[newIdx].includes("b") || paletteArea[newIdx].includes("o");
     if(!selectedItem && selectedItem >= 0)imgList[newIdx].src = "asset/gambar/darah.png";
     else if(selectedItem == 1 )imgList[newIdx].src = "asset/gambar/darah.png";
     else if(selectedItem == 2 )imgList[newIdx].src = "asset/gambar/darah.png";
-    else if(selectedItem == 3 ){
+    else if(selectedItem == 3 && isbold){
+        imgList[newIdx].style.backgroundColor = "rgba(0,0,220,.5)";
         if(paletteArea[newIdx].includes("a")){
             imgList[newIdx].src = "asset/gambar/clot-blood.png";
+        }else{
+            imgList[newIdx].src = "asset/gambar/bloods.png";
         }
     }
-    else if(selectedItem == 4 ){
+    else if(selectedItem == 4 && isbold ){
+        imgList[newIdx].style.backgroundColor =  "rgba(225,225,0,.5)";
         if(paletteArea[newIdx].includes("b")){
             imgList[newIdx].src = "asset/gambar/clot-blood.png";
+        }else{
+            imgList[newIdx].src = "asset/gambar/bloods.png";
         }
     }  
-    else if(selectedItem == 5 ){
+    else if(selectedItem == 5 && isbold ){
+        imgList[newIdx].style.backgroundColor = "white";
         imgList[newIdx].src = "asset/gambar/white.png";
-        paletteArea[newIdx] = "normal";
+        paletteArea[newIdx] = "";
     }    
     
     if(selectedItem == 0 || selectedItem == 1 || selectedItem == 2){

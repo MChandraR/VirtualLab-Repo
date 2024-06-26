@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="asset/css/animation.css">
+    <link rel="stylesheet" href="asset/css/style.css">
+</head>
+<body id="body">
+    <div class="container">
+        <img class="mute-btn" src="asset/gambar/speaker.png" id="speaker" onclick="mute()"/>
+        <div class="text-area" id="start-text">
+            <h1 class="home-title">Virtual Lab</h1>
+            <span class="welcome">Selamat datang di virtual lab ^-^</span>
+        </div>
+        <button class="start-btn" id="mulai" onclick="start()">Mulai</button>
+        <button class="tutorial hide" id="tutorial" onclick="openTutor()">Tutorial</button>
+        <div class="palette hide" id="palette">
+            
+        </div>
+
+        <div id="tutorialArea" class="tutorial-area hide">
+            <img src="asset/gambar/doctor.png" alt="" class="dokter">
+            <div  class="tutor-text">
+                <label>Gunakan sampel darah untuk mengecek golongan darah </label><br>
+                <label>Tarik salah satu item ke dalam papan / palette</label>
+            </div >
+            <div  class="tutor-text-palette">
+                <label>Gunakan palette untuk mencampurkan dan menganalisa golongan darah </label><br>
+            </div >
+            <button class="understand" onclick="closeTutor()">Mengerti</button>
+        </div>
+
+        <div class="tools-area hide" id="toolsArea">
+            <img id="sample1" src="asset/gambar/sampel-darah.png" alt="">
+            <img id="sample2" src="asset/gambar/sampel-darah2.png" alt="">
+            <img id="sample3" src="asset/gambar/sampel-darah3.png" alt="">
+            <img id="antiA" src="asset/gambar/anti-a.png" alt="">
+            <img id="antiB" src="asset/gambar/anti-b.png" alt="">
+            <img id="kapas" src="asset/gambar/cotton.png" alt="" style="width : 7vw;height : 7vw;">
+        </div>
+    </div>
+</body>
+<script src="asset/js/script.js"></script>
+</html>
