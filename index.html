@@ -12,7 +12,12 @@
         <img class="mute-btn" src="asset/gambar/speaker.png" id="speaker" onclick="mute()"/>
         <div class="text-area" id="start-text">
             <h1 class="home-title">Virtual Lab</h1>
-            <span class="welcome">Selamat datang di virtual lab ^-^</span>
+            <span class="welcome">Selamat datang di virtual lab by Kelompok 2</span>
+            <ol style="font-size : 1.5rem;" class="kelompok">
+                <li >Wan Malatalia</li>
+                <li>Nurhazianti</li>
+                <li>Yunita safitri</li>
+            </ol>
         </div>
         <button class="start-btn" id="mulai" onclick="start()">Mulai</button>
         <button class="tutorial hide" id="tutorial" onclick="openTutor()">Tutorial</button>
@@ -21,15 +26,29 @@
         </div>
 
         <div id="tutorialArea" class="tutorial-area hide">
-            <img src="asset/gambar/doctor.png" alt="" class="dokter">
-            <div  class="tutor-text">
+            <img src="asset/gambar/doctor.png" alt="" class="dokter" id="dokter">
+            <img src="asset/gambar/example.png" alt="" class="example" id="example">
+            <div class="tutor-text" id="text1">
                 <label>Gunakan sampel darah untuk mengecek golongan darah </label><br>
                 <label>Tarik salah satu item ke dalam papan / palette</label>
             </div >
-            <div  class="tutor-text-palette">
+            <div class="tutor-text-palette" id="text2">
                 <label>Gunakan palette untuk mencampurkan dan menganalisa golongan darah </label><br>
             </div >
-            <button class="understand" onclick="closeTutor()">Mengerti</button>
+            <div class="tutor-text-3 hide" id="text3">
+                <label>Teteskan darah ke papan dan gunakan antiA atau antiB untuk melihat reaksi yang terjadi</label><br>
+                <ul >
+                    <li>Jika darah yang diteteskan antiA mengalami penggumpanlan berarti golongan darah tersebut A</li>
+                    <li>Jika darah yang diteteskan antiB mengalami penggumpanlan berarti golongan darah tersebut B</li>
+                    <li>Jika darah yang diteteskan antiA dan antiB mengalami penggumpanlan berarti golongan darah tersebut AB</li>
+                    <li>Jika tidak ada reaksi sama sekali maka golongan darah tersebut O</li>
+                </ul>
+            </div >
+            <div class="tutor-text-4" id="text4">
+                <label>Berikut merupakan hasil uji coba untuk golongan dari AB,B dan O</label><br><br>
+                <label>- Sampel 1 menggumpal jika diteteskan antiA dan antiB pada baris pertama sehingga golongan darahnya AB</label><br>
+            </div >
+            <button class="understand" onclick="closeTutor()" id="next">Mengerti</button>
         </div>
 
         <div class="tools-area hide" id="toolsArea">

@@ -14,12 +14,20 @@ let speaker = document.getElementById("speaker");
 let body = document.getElementById("body");
 let tutorialArea = document.getElementById("tutorialArea");
 let selectedArea = 0;
+let dokter = document.getElementById("dokter");
+let example = document.getElementById("example");
+let next = document.getElementById("next");
 let tombol_start = document.getElementById("mulai");
+let tutorTx = document.getElementById("text1");
+let tutorTx2 = document.getElementById("text2");
+let tutorTx3 = document.getElementById("text3");
+let tutorTx4 = document.getElementById("text4");
 let tutorial = document.getElementById("tutorial");
 let text_area_start = document.getElementById("start-text");
 bgm.src = "asset/musik/bgm1.mp3";
 bgm.loop = true;
 bgm.volume = volume;
+let tutorIdx = 0;
 
 let golDarah = ["a","b","ab","o"];
 
@@ -44,11 +52,30 @@ function start() {
 }
 
 function closeTutor(){
-    tutorialArea.classList.add("hide");
+   
+    if(--tutorIdx==3){
+        tutorTx.style.visibility  = "hidden";
+        tutorTx2.style.visibility  = "hidden";
+        tutorTx3.classList.remove("hide");
+        dokter.classList.add("geser");
+    }else if(--tutorIdx==1){
+        tutorTx3.classList.add("hide");
+        example.style.visibility = "visible";
+        tutorTx4.style.visibility = "visible";
+        next.innerHTML = "Mengerti";
+    }else if(--tutorIdx<=0)tutorialArea.classList.add("hide");
 }
 
 function openTutor(){
     tutorialArea.classList.remove("hide");
+    tutorTx.style.visibility  = "visible";
+    tutorTx2.style.visibility  = "visible";
+    tutorTx3.classList.add("hide");
+    tutorTx4.style.visibility = "hidden";
+    dokter.classList.remove("geser");
+    example.style.visibility = "hidden";
+    next.innerHTML = "Selanjutnya";
+    tutorIdx = 4;
 }
 
 function mute() {

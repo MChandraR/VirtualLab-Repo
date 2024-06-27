@@ -1,6 +1,7 @@
 body{
     max-height: 100vh;
     padding : 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     background: url("../gambar/labor.jpg");
     margin : 0;
     background-size: cover;
@@ -54,7 +55,7 @@ body.start{
 }
 
 .welcome{
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: bold;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     
@@ -185,7 +186,7 @@ body.start{
     color : white;
     padding : 1rem;
     bottom : 40vh;
-    width:40vw;
+    width:38vw;
     box-shadow: 1 1 1 black;
     animation: myAnim 2s ease 2s infinite normal forwards;
     text-shadow: 1 1 1rem black;
@@ -199,7 +200,7 @@ body.start{
     color : white;
     padding : 1rem;
     top : 1rem;
-    right : 1vw;
+    right : 0;
     box-shadow: 1 1 1 black;
     animation: myAnim 2s ease 2s infinite normal forwards;
     text-shadow: 1 1 1rem black;
@@ -221,10 +222,74 @@ body.start{
     border: solid black 1px;
 }
 
+.dokter.hide{
+    position: fixed;
+    bottom: 0;
+    width: 40vw;
+    height: 90vh ;
+    left: 38vw;
+}
+
 .dokter{
     position: fixed;
     bottom: 0;
     width: 40vw;
     height: 90vh ;
     left: 38vw;
+}
+
+.example{
+    position: fixed;
+    bottom: 10vh;
+    width: 25vw;
+    height: 50vh ;
+    right: 8vw;
+}
+
+.dokter.geser{
+    transform: translateX(-50%);
+    transition: transform .5s linear;
+}
+
+ol{
+    display: grid;
+    grid-template-columns: 1;
+    align-items: center;
+    justify-content: center;
+}
+
+.tutor-text-3{
+    position : absolute;
+    color : white;
+    padding : 1rem;
+    top :1rem;
+    right: 0;
+    width:40vw; 
+    box-shadow: 1 1 1 black;
+    animation: myAnim 2s ease 2s infinite normal forwards;
+    text-shadow: 1 1 1rem black;
+    font-size : 1.5rem;
+    visibility: visible;
+}
+
+.tutor-text-4{
+    position : absolute;
+    color : white;
+    padding : 1rem;
+    top :1rem;
+    right: 1rem;
+    width:40vw; 
+    box-shadow: 1 1 1 black;
+    animation: myAnim 2s ease 2s infinite normal forwards;
+    text-shadow: 1 1 1rem black;
+    font-size : 1.5rem;
+    visibility: visible;
+}
+
+.tutor-text-3.hide{
+   visibility: hidden;
+}
+
+.kelompok li{
+    text-shadow: 1 1 5px white;
 }
